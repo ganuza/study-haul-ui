@@ -4,7 +4,7 @@
   height: 100vh;
   width: 100vw;
   grid-template-columns: 1fr;
-  grid-template-rows: 5% 60% auto 5%; /* Changed the middle row to auto */
+  /* grid-template-rows: 5% 60% auto 5%; Changed the middle row to auto */
   grid-template-areas:
     'header'
     'all-questions-container' 'all-questions-cards'
