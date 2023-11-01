@@ -1,4 +1,4 @@
-export const getAllQuestions = () => {
+const getAllQuestions = () => {
   return fetch('http://localhost:8080/api/v1/questions')
     .then(response => {
       if(!response.ok) {
@@ -8,3 +8,5 @@ export const getAllQuestions = () => {
     }) 
 
 }
+
+export { getAllQuestions }
