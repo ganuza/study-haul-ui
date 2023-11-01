@@ -1,3 +1,4 @@
+import { getAllQuestions } from '../../apiCalls';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
@@ -5,6 +6,12 @@ import AllQuestionsContainer from '../AllQuestionsContainer/AllQuestionsContaine
 import Footer from '../Footer/Footer';
 
 function App() {
+
+
+  // useEffect(() => {
+  //   getAllQuestions()
+  //   .then(data => console.log('App data: ', data))
+  // }, [])
   return (
     <div className="App">
       <Header className="header" />
