@@ -1,6 +1,6 @@
-.header {
+/* .header {
   background-color: aqua;
-}
+} */
 
 .sr-only {
   border: 0;
@@ -11,4 +11,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
- }
+}
