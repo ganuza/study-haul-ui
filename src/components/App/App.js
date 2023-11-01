@@ -11,12 +11,10 @@ import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
 function App() {
   console.log('App dumsdata: ', questions);
-  const [allQuestions, setAllQuestions] = useState([]);
 
-  // useEffect(() => {
-  //   getAllQuestions()
-  //   .then(data => console.log('App data: ', data))
-  // }, [])
+  const [allQuestions, setAllQuestions] = useState(questions);
+  console.log('allQuestions: ', allQuestions)
+
   return (
     <div className="App">
       <Header className="header" />
@@ -26,7 +24,7 @@ function App() {
           element={
             <AllQuestionsContainer
               className="all-questions-container"
-              questions={questions}
+              allQuestions={allQuestions} 
             />
           }
         />
