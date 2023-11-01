@@ -1,29 +1,46 @@
 import './AllQuestionsContainer.css';
 import AllQuestionsCard from '../AllQuestionsCard/AllQuestionsCard';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function AllQuestionsContainer({ questions }) {
-  console.log('AQCont quests: ', questions);
+function AllQuestionsContainer({ allQuestions }) {
+  const [selectedMod, setSelectedMod] = useState(null);
 
-  const allQuestionsCards = questions.map(question => {
-    return (
-      <AllQuestionsCard
-        id={question.id}
-        key={question.id}
-        mod_num={question.mod_num}
-        topic={question.topic}
-        question={question.question}
-        answer={question.answer}
-      />
-    );
-  });
+  const filterQuestions = (mod) => {
+    setSelectedMod(mod);
+  }
+
+  const clearFilter = () => {
+    setSelectedMod(null);
+  }
+
+  const filteredQuestions = selectedMod
+    ? allQuestions.filter((question) => question.mod_num === selectedMod)
+    : allQuestions;
+
+  const allQuestionsCards = filteredQuestions.map((question) => (
+    <AllQuestionsCard
+      id={question.id}
+      key={question.id}
+      mod_num={question.mod_num}
+      topic={question.topic}
+      question={question.question}
+      answer={question.answer}
+    />
+  ));
 
   return (
     <div className="all-questions-container">
       <div className="btn-container">
-        <button className="filter-btn">All Questions</button>
-        <button className="filter-btn">Mod 2</button>
-        <button className="filter-btn">Mod 3</button>
+        <button className="filter-btn" onClick={clearFilter}>
+          All Questions
+        </button>
+        <button className="filter-btn" onClick={() => filterQuestions(2)}>
+          Mod 2
+        </button>
+        <button className="filter-btn" onClick={() => filterQuestions(3)}>
+          Mod 3
+        </button>
       </div>
       {allQuestionsCards}
     </div>
