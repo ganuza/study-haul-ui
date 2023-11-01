@@ -1,10 +1,24 @@
 import './AllQuestionsContainer.css';
 import AllQuestionsCard from '../AllQuestionsCard/AllQuestionsCard';
 
-function AllQuestionsContainer() {
+function AllQuestionsContainer({questions}) {
+
+  console.log('AQCont quests: ', questions)
+
+  const allQuestionsCards = questions.map((question) => {
+    return <AllQuestionsCard
+      id={question.id}
+      key={question.id}
+      mod_num={question.mod_num}
+      topic={question.topic}
+      question={question.question}
+      answer={question.answer}
+    />
+  })
+
   return (
     <div className="all-questions-container">
-      <h2>ALL QUESTIONS CONTAINER</h2>
+      {allQuestionsCards}
       <AllQuestionsCard />
     </div>
   );
