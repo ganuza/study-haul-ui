@@ -1,3 +1,57 @@
 .all-questions-card {
-  background-color: cadetblue;
+  background-color: #eef5fc;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 3px solid black;
+  box-shadow: 4px 4px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 1rem 1.5rem;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  border-radius: 30px;
+  box-shadow: none;
+  background-color: #01122e;
+  text-align: center;
+  width: 15rem;
+  color: #ceecfe;
+  align-items: center;
+  color: #ceecfe;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.filter-btn:hover {
+  cursor: pointer;
+  background-color: #ceecfe;
+  color: #01122e;
+  transition-duration: 0.3s;
+}
+
+.filter-btn:focus {
+  background-color: #c58103;
+  color: #01122e;
+}
+
+nav {
+  color: #ceecfe;
+  align-items: center;
+  display: flex;
+  font-size: 1.75em;
+  height: 10vh;
+  justify-content: space-around;
+  width: 100%;
 }
