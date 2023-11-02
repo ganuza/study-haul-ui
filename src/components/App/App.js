@@ -12,8 +12,16 @@ import ErrorComponent from '../ErrorComponent/ErrorComponent';
 function App() {
   console.log('App dumsdata: ', questions);
 
-  const [allQuestions, setAllQuestions] = useState(questions);
+  const [allQuestions, setAllQuestions] = useState([]);
+  const [error, setError] = useState('');
+
   console.log('allQuestions: ', allQuestions)
+
+  useEffect(() => {
+    getAllQuestions()
+    .then(data => setAllQuestions(data))
+    .catch(error => setError(error.message));
+  }, [])
 
   return (
     <div className="App">

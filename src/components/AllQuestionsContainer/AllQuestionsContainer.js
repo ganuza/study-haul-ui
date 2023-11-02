@@ -19,10 +19,9 @@ function AllQuestionsContainer({ allQuestions }) {
     : allQuestions;
 
   const allQuestionsCards = filteredQuestions.map((question) => (
-    <Link to={`/questions/${question.id}`}>
+    <Link to={`/questions/${question.id}`} key={question.id}>
       <AllQuestionsCard
         id={question.id}
-        key={question.id}
         mod_num={question.mod_num}
         topic={question.topic}
         question={question.question}
