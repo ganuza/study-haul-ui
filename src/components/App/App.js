@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import AllQuestionsContainer from '../AllQuestionsContainer/AllQuestionsContainer';
 import Footer from '../Footer/Footer';
-import SelQuestCont from '../SelQuestCont/SelQuestCont';
+import SelectedQuestionContainer from '../SelectedQuestionContainer/SelectedQuestionContainer.js';
 import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
   const [allQuestions, setAllQuestions] = useState([]);
   const [error, setError] = useState('');
 
-  console.log('allQuestions: ', allQuestions)
+  console.log('allQuestions: ', allQuestions);
 
   useEffect(() => {
     getAllQuestions()
-    .then(data => setAllQuestions(data))
-    .catch(error => setError(error.message));
-  }, [])
+      .then(data => setAllQuestions(data))
+      .catch(error => setError(error.message));
+  }, []);
 
   return (
     <div className="App">
@@ -32,11 +32,11 @@ function App() {
           element={
             <AllQuestionsContainer
               className="all-questions-container"
-              allQuestions={allQuestions} 
+              allQuestions={allQuestions}
             />
           }
         />
-        <Route path="/questions/:id" element={<SelQuestCont />} />
+        <Route path="/questions/:id" element={<SelectedQuestionContainer />} />
         <Route path="*" element={<ErrorComponent />} />
       </Routes>
 

@@ -7,7 +7,7 @@ const getAllQuestions = () => {
   });
 };
 
-const getSelQuestion = id => {
+const getSelectedQuestion = id => {
   return fetch(`http://localhost:8080/api/v1/questions/${id}`).then(
     response => {
       if (!response.ok) {
@@ -18,4 +18,4 @@ const getSelQuestion = id => {
   );
 };
 
-export { getAllQuestions, getSelQuestion };
+export { getAllQuestions, getSelectedQuestion };
