@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { questions } from '../../data/data.js';
-import { getAllQuestions } from '../../apiCalls';
+import { getAllQuestions, getSelQuestion } from '../../apiCalls';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
