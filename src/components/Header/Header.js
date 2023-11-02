@@ -6,9 +6,13 @@ function Header() {
   const location = useLocation();
   return (
     <div className="header">
-      {location.pathname !== '/' && <Link to="/">Home</Link>}
-      <img src={logo} />
+      <img src={logo} alt="study-haul-logo" className="logo-img" />
       <h1 className="sr-only">Study Hall</h1>
+      {location.pathname !== '/' && (
+        <Link className="home-link" to="/">
+          Home
+        </Link>
+      )}
     </div>
   );
 }
