@@ -5,7 +5,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import AllQuestionsContainer from '../AllQuestionsContainer/AllQuestionsContainer';
-import Footer from '../Footer/Footer';
 import SelectedQuestionContainer from '../SelectedQuestionContainer/SelectedQuestionContainer.js';
 import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
@@ -39,8 +38,6 @@ function App() {
         <Route path="/questions/:id" element={<SelectedQuestionContainer />} />
         <Route path="*" element={<ErrorComponent />} />
       </Routes>
-
-      <Footer className="footer" />
     </div>
   );
 }
