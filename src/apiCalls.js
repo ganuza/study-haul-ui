@@ -1,15 +1,15 @@
 const getAllQuestions = () => {
-  return fetch('http://localhost:8080/api/v1/questions').then(response => {
+  return fetch('http://localhost:8080/api/v1/questions').then((response) => {
     if (!response.ok) {
-      throw new Error(`${response.stat4us} ${response.statusText}`);
+      throw new Error(`${response.status} ${response.statusText}`);
     }
     return response.json();
   });
 };
 
-const getSelectedQuestion = id => {
+const getSelectedQuestion = (id) => {
   return fetch(`http://localhost:8080/api/v1/questions/${id}`).then(
-    response => {
+    (response) => {
       if (!response.ok) {
         throw new Error(`${response.status} ${response.statusText}`);
       }
