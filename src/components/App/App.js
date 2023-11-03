@@ -18,8 +18,8 @@ function App() {
 
   useEffect(() => {
     getAllQuestions()
-      .then(data => setAllQuestions(data))
-      .catch(error => setError(error.message));
+      .then((data) => setAllQuestions(data))
+      .catch((error) => setError(error.message));
   }, []);
 
   return (
@@ -27,24 +27,37 @@ function App() {
       <Header className="header" />
 
       {error ? (
-        <div className='app-error-cont'>
-          <ErrorComponent error={error} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>
+        <div className="app-error-cont">
+          <ErrorComponent
+            error={error}
+            message="We're sorry, we can't find the requested page.  Please try again."
+          />
         </div>
       ) : (
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <AllQuestionsContainer
-              className="all-questions-container"
-              allQuestions={allQuestions}
-            />
-          }
-        />
-        <Route path="/questions/:id" element={<SelectedQuestionContainer />} />
-        <Route path="*" element={<ErrorComponent error={error} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>} />
-      </Routes>
+        <Routes>
+          <Routes
+            path="/"
+            element={
+              <AllQuestionsContainer
+                className="all-questions-container"
+                allQuestions={allQuestions}
+              />
+            }
+          />
+          <Route
+            path="/questions/:id"
+            element={<SelectedQuestionContainer />}
+          />
+          <Route
+            path="*"
+            element={
+              <ErrorComponent
+                error={error}
+                message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."
+              />
+            }
+          />
+        </Routes>
       )}
     </div>
   );
