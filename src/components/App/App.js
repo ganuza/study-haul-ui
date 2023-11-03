@@ -25,6 +25,13 @@ function App() {
   return (
     <div className="App">
       <Header className="header" />
+
+      {error ? (
+        <div className='app-error-cont'>
+          <ErrorComponent error={error} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>
+        </div>
+      ) : (
+
       <Routes>
         <Route
           path="/"
@@ -36,8 +43,9 @@ function App() {
           }
         />
         <Route path="/questions/:id" element={<SelectedQuestionContainer />} />
-        <Route path="*" element={<ErrorComponent />} />
+        <Route path="*" element={<ErrorComponent error={error} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>} />
       </Routes>
+      )}
     </div>
   );
 }
