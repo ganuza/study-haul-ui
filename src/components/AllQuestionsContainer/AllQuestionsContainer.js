@@ -2,6 +2,7 @@ import './AllQuestionsContainer.css';
 import AllQuestionsCard from '../AllQuestionsCard/AllQuestionsCard';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function AllQuestionsContainer({ allQuestions }) {
   const [selectedMod, setSelectedMod] = useState(null);
@@ -21,11 +22,7 @@ function AllQuestionsContainer({ allQuestions }) {
   const allQuestionsCards = filteredQuestions.map((question) => (
     <Link to={`/questions/${question.id}`} key={question.id}>
       <AllQuestionsCard
-        id={question.id}
-        mod_num={question.mod_num}
-        topic={question.topic}
         question={question.question}
-        answer={question.answer}
       />
     </Link>
   ));
@@ -49,3 +46,17 @@ function AllQuestionsContainer({ allQuestions }) {
 }
 
 export default AllQuestionsContainer;
+
+AllQuestionsContainer.propTypes = {
+  allQuestions: PropTypes.arrayOf(
+    PropTypes.shape({
+      answer: PropTypes.string.isRequired,
+      created_at: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      mod_num: PropTypes.number.isRequired,
+      question: PropTypes.string.isRequired,
+      topic: PropTypes.string.isRequired,
+      updated_at: PropTypes.string.isRequired,
+    })
+  ),
+};
