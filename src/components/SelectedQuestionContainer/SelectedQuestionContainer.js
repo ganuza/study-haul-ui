@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import SelectedQuestionCard from '../SelectedQuestionCard/SelectedQuestionCard';
 import Form from '../Form/Form';
+import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
 function SelectedQuestionContainer() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
@@ -18,7 +19,7 @@ function SelectedQuestionContainer() {
         const data = await getSelectedQuestion(id);
         setSelectedQuestion(data);
       } catch (error) {
-        setSelectedQuestionError(error);
+        setSelectedQuestionError(error.message);
       }
     }
 
@@ -31,16 +32,19 @@ function SelectedQuestionContainer() {
 
   return (
     <div className='whole-card-cont'>
-      {!selectedQuestion ? (
-        <p>Loading...</p>
-      ) : (<div className='card-and-form'>
-        <SelectedQuestionCard
-          topic={selectedQuestion.topic}
-          question={selectedQuestion.question}
-        />
+      {selectedQuestionError ? (<ErrorComponent error={selectedQuestionError} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>) :
 
-        <Form addUserAnswer={addUserAnswer}/>
-        {!userInput ? <p>'Answer Field Must Be Filled Out'</p> : (<div className='answers-cont'><h2>Your Answer: {userInput}</h2><h2>Correct Answer: {selectedQuestion.answer}</h2></div>)}
+      !selectedQuestion ? (
+        <p>Loading...</p>
+      ) : (
+        <div className='card-and-form'>
+          <SelectedQuestionCard
+            topic={selectedQuestion.topic}
+            question={selectedQuestion.question}
+          />
+
+          <Form addUserAnswer={addUserAnswer}/>
+          {!userInput ? <p>'Answer Field Must Be Filled Out'</p> : (<div className='answers-cont'><h2>Your Answer: {userInput}</h2><h2>Correct Answer: {selectedQuestion.answer}</h2></div>)}
         </div>
       )}
     </div>
