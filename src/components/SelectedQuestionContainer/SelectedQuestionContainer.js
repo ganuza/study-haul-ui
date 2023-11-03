@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import SelectedQuestionCard from '../SelectedQuestionCard/SelectedQuestionCard';
 
 function SelectedQuestionContainer() {
-  const [selectedQuestion, setSelectedQuestion] = useState({});
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [selectedQuestionError, setSelectedQuestionError] = useState('');
   const { id } = useParams();
   console.log('useParams', id);
@@ -14,7 +14,6 @@ function SelectedQuestionContainer() {
     async function fetchData() {
       try {
         const data = await getSelectedQuestion(id);
-        console.log('selectedQuestion', selectedQuestion);
         setSelectedQuestion(data);
       } catch (error) {
         setSelectedQuestionError(error);
