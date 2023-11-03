@@ -7,7 +7,9 @@ function Header() {
   return (
     <div className="header">
       <div className="logo-container">
-        <img src={logo} alt="study-haul-logo" className="logo-img" />
+        <Link className="home-link" to="/">
+          <img src={logo} alt="study-haul-logo" className="logo-img" />
+        </Link>
         <h1 className="sr-only">Study Hall</h1>
       </div>
       {location.pathname !== '/' && (
