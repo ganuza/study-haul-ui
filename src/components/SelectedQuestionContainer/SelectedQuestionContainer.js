@@ -37,7 +37,6 @@ function SelectedQuestionContainer() {
         <SelectedQuestionCard
           topic={selectedQuestion.topic}
           question={selectedQuestion.question}
-          answer={selectedQuestion.answer}
         />
 
         <Form addUserAnswer={addUserAnswer}/>
