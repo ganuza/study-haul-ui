@@ -1,37 +1,42 @@
-
-import { useState } from 'react'
-import './Form.css'
+import { useState } from 'react';
+import './Form.css';
+import PropTypes from 'prop-types';
 
 function Form({ addUserAnswer }) {
-
-  const [answer, setAnswer] = useState('')
+  const [answer, setAnswer] = useState('');
 
   const submitAnswer = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const newUserAnswer = answer
+    const newUserAnswer = answer;
 
-    addUserAnswer(newUserAnswer)
+    addUserAnswer(newUserAnswer);
 
-    clearForm()
-  }
+    clearForm();
+  };
 
   const clearForm = () => {
-    setAnswer('')
-  }
+    setAnswer('');
+  };
 
   return (
     <form>
       <textarea
         rows={5}
-        placeholder='Enter Your Answer'
+        placeholder="Enter Your Answer"
         value={answer}
-        onChange={event => setAnswer(event.target.value)}
+        onChange={(event) => setAnswer(event.target.value)}
       />
-      
-      <button className='filter-btn' onClick={(event) => submitAnswer(event)}>Submit Answer</button>
+
+      <button className="filter-btn" onClick={(event) => submitAnswer(event)}>
+        Submit Answer
+      </button>
     </form>
-  )
+  );
 }
 
-export default Form
+export default Form;
+
+Form.propTypes = {
+  addUserAnswer: PropTypes.func.isRequired,
+};

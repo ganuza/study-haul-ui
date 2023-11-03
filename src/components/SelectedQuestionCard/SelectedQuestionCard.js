@@ -1,4 +1,5 @@
 import './SelectedQuestionCard.css';
+import PropTypes from 'prop-types';
 
 function SelectedQuestionCard({ topic, question }) {
   return (
@@ -10,3 +11,8 @@ function SelectedQuestionCard({ topic, question }) {
 }
 
 export default SelectedQuestionCard;
+
+SelectedQuestionCard.propTypes = {
+  topic: PropTypes.string.isRequired,
+  question: PropTypes.string.isRequired,
+};

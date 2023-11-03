@@ -9,7 +9,7 @@ import ErrorComponent from '../ErrorComponent/ErrorComponent';
 function SelectedQuestionContainer() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [selectedQuestionError, setSelectedQuestionError] = useState('');
-  const [userInput, setUserInput] = useState('')
+  const [userInput, setUserInput] = useState('');
   const { id } = useParams();
   console.log('useParams', id);
 
@@ -27,24 +27,34 @@ function SelectedQuestionContainer() {
   }, [id]);
 
   const addUserAnswer = (userAnswer) => {
-    setUserInput(userAnswer)
-  }
+    setUserInput(userAnswer);
+  };
 
   return (
-    <div className='whole-card-cont'>
-      {selectedQuestionError ? (<ErrorComponent error={selectedQuestionError} message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."/>) :
-
-      !selectedQuestion ? (
+    <div className="whole-card-cont">
+      {selectedQuestionError ? (
+        <ErrorComponent
+          error={selectedQuestionError}
+          message="We're sorry, we can't find the requested page.  Please hit the 'Home' button above."
+        />
+      ) : !selectedQuestion ? (
         <p>Loading...</p>
       ) : (
-        <div className='card-and-form'>
+        <div className="card-and-form">
           <SelectedQuestionCard
             topic={selectedQuestion.topic}
             question={selectedQuestion.question}
           />
 
-          <Form addUserAnswer={addUserAnswer}/>
-          {!userInput ? <p>'Answer Field Must Be Filled Out'</p> : (<div className='answers-cont'><h2>Your Answer: {userInput}</h2><h2>Correct Answer: {selectedQuestion.answer}</h2></div>)}
+          <Form addUserAnswer={addUserAnswer} />
+          {!userInput ? (
+            <p>'Answer Field Must Be Filled Out'</p>
+          ) : (
+            <div className="answers-cont">
+              <h2>Your Answer: {userInput}</h2>
+              <h2>Correct Answer: {selectedQuestion.answer}</h2>
+            </div>
+          )}
         </div>
       )}
     </div>
