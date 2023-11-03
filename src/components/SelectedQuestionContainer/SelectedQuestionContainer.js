@@ -8,21 +8,35 @@ function SelectedQuestionContainer() {
   const [selectedQuestion, setSelectedQuestion] = useState({});
   const [selectedQuestionError, setSelectedQuestionError] = useState('');
   const { id } = useParams();
-  
-  useEffect(() => {
-    getSelectedQuestion(id)
-      .then(data => setSelectedQuestion(data))
-      .catch(error => setSelectedQuestionError());
-  }, [id]);
-  
-  return (
-    <SelectedQuestionCard
-      topic={selectedQuestion.topic}
-      question={selectedQuestion.question}
-      answer={selectedQuestion.answer}
-    />
-  );
+  console.log('useParams', id);
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getSelectedQuestion(id);
+        console.log('selectedQuestion', selectedQuestion);
+        setSelectedQuestion(data);
+      } catch (error) {
+        setSelectedQuestionError(error);
+      }
+    }
+
+    fetchData();
+  }, [id]);
+
+  return (
+    <div>
+      {!selectedQuestion ? (
+        <p>Loading...</p>
+      ) : (
+        <SelectedQuestionCard
+          topic={selectedQuestion.topic}
+          question={selectedQuestion.question}
+          answer={selectedQuestion.answer}
+        />
+      )}
+    </div>
+  );
 }
 
 export default SelectedQuestionContainer;
