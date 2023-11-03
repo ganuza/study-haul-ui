@@ -2,6 +2,16 @@
   background-color: aqua;
 } */
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+}
+
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -11,4 +21,11 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.home-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
