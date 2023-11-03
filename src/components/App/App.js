@@ -35,7 +35,7 @@ function App() {
         </div>
       ) : (
         <Routes>
-          <Routes
+          <Route
             path="/"
             element={
               <AllQuestionsContainer
