@@ -20,7 +20,7 @@ function AllQuestionsContainer({ allQuestions }) {
     : allQuestions;
 
   const allQuestionsCards = filteredQuestions.map((question) => (
-    <Link to={`/questions/${question.id}`} key={question.id}>
+    <Link to={`/questions/${question.id}`} key={question.id} className="card-link">
       <AllQuestionsCard
         question={question.question}
       />
@@ -29,6 +29,7 @@ function AllQuestionsContainer({ allQuestions }) {
 
   return (
     <div className="all-questions-container">
+      <p className="welcome-text">Welcome to Study Haul! Choose a button to sort questions by mod.</p>
       <div className="btn-container">
         <button className="filter-btn" onClick={clearFilter}>
           All Questions
@@ -40,6 +41,7 @@ function AllQuestionsContainer({ allQuestions }) {
           Mod 3
         </button>
       </div>
+      <h2 className="questions-heading">Choose a Question</h2>
       {allQuestionsCards}
     </div>
   );

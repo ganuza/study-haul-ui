@@ -3,7 +3,7 @@
   0 0 5px #01122e,
   0 0 7px #01122e,
   0 0 10px #01122e;
-  background-color: #eef5fc;
+  background-color: #ceecfe;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -11,10 +11,23 @@
   /* box-shadow: 4px 4px; */
   border-radius: 15px;
   padding: 10px;
-  margin: 1rem 1.5rem;
+  margin: 2.5rem 6rem;
+}
+
+.welcome-text {
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.questions-heading {
+  color: aliceblue;
+
 }
 
 .all-questions-card:hover {
+  background-color: #01122e;
   box-shadow: 0 0 2px #ceecfe,
   0 0 5px #ceecfe,
   0 0 7px #ceecfe,
@@ -29,6 +42,7 @@ h2 {
 .btn-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .filter-btn {
