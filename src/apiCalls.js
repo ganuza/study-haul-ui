@@ -6,6 +6,7 @@ const getAllQuestions = () => {
     return response.json();
   });
 };
+
 const getSelectedQuestion = (id) => {
   return fetch(`https://study-haul-api.vercel.app/api/v1/questions/${id}`).then(
     (response) => {
@@ -16,4 +17,5 @@ const getSelectedQuestion = (id) => {
     }
   );
 };
+
 export { getAllQuestions, getSelectedQuestion };

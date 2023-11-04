@@ -9,12 +9,9 @@ import SelectedQuestionContainer from '../SelectedQuestionContainer/SelectedQues
 import ErrorComponent from '../ErrorComponent/ErrorComponent';
 
 function App() {
-  console.log('App dumsdata: ', questions);
 
   const [allQuestions, setAllQuestions] = useState([]);
   const [error, setError] = useState('');
-
-  console.log('allQuestions: ', allQuestions);
 
   useEffect(() => {
     getAllQuestions()

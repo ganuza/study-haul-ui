@@ -53,7 +53,6 @@ const questions = [
         "created_at": "2023-10-29T20:36:58.848Z",
         "updated_at": "2023-10-29T20:36:58.848Z"
     }
-
 ]
 
 export {questions}
