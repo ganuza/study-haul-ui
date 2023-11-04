@@ -28,7 +28,7 @@ function SelectedQuestionContainer() {
 
   const addUserAnswer = (userAnswer) => {
     setUserInput(userAnswer);
-    setFormSubmitted(true); // Set the form as submitted when the answer is added
+    setFormSubmitted(true);
   };
 
   return (
