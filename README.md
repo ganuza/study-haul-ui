@@ -3,6 +3,9 @@
 ## Abstract:
 Study Haul is a React Application that retrieves data from a custom API, built as part of a Stretch Tech project in module 3 of the Front End program at the Turing School of Software and Design. The API was created using Express, Knex, and PostgreSQL and was seeded with interview questions that were created from class audits in modules 2 and 3 of the Front End program. When the page loads, users are presented with a home screen that lists all questions available in the database. Users can then sort the questions by module 2 or module 3. To answer a question, the user selects the question and the selected question screen in loaded. The user is then able to enter their answer and check it against the correct answer.
 
+## Deployed Link
+[Study Haul Deployed App](https://study-haul-api-u15v.vercel.app/)
+
 ## Installation Instructions:
 [Study Haul](https://github.com/ganuza/study-haul-ui) works in a browser, but if you would like to build your own version, you can clone the repository to your local machine as follows:
 
@@ -50,8 +53,6 @@ Study Haul is a React Application that retrieves data from a custom API, built a
 ![study-haul-02](https://github.com/ganuza/study-haul-ui/assets/125393235/6c391909-bacb-4e8c-8c2b-2e8cf51db789)
 
 ![study-haul-03](https://github.com/ganuza/study-haul-ui/assets/125393235/b42697ee-2ddd-4f0f-88c1-caf9a897390c)
-
-[Study Haul Deployed App](https://study-haul-api-u15v.vercel.app/)
 
 ## Context:
 
