@@ -10,8 +10,8 @@ function SelectedQuestionContainer() {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [selectedQuestionError, setSelectedQuestionError] = useState('');
   const [userInput, setUserInput] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false); // State to track form submission
   const { id } = useParams();
-  console.log('useParams', id);
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +28,7 @@ function SelectedQuestionContainer() {
 
   const addUserAnswer = (userAnswer) => {
     setUserInput(userAnswer);
+    setFormSubmitted(true); // Set the form as submitted when the answer is added
   };
 
   return (
@@ -47,14 +48,13 @@ function SelectedQuestionContainer() {
           />
 
           <Form addUserAnswer={addUserAnswer} />
-          {!userInput ? (
-            <p>'Answer Field Must Be Filled Out'</p>
-          ) : (
+
+          {formSubmitted && userInput !== '' ? (
             <div className="answers-cont">
               <h2>Your Answer: {userInput}</h2>
               <h2>Correct Answer: {selectedQuestion.answer}</h2>
             </div>
-          )}
+          ) : null}
         </div>
       )}
     </div>
