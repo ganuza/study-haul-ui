@@ -10,7 +10,7 @@ function Header() {
         <Link className="home-link" to="/">
           <img src={logo} alt="study-haul-logo" className="logo-img" />
         </Link>
-        <h1 className="sr-only">Study Hall</h1>
+        <h1 className="sr-only">Study Haul</h1>
       </div>
       {location.pathname !== '/' && (
         <Link className="home-link" to="/">
