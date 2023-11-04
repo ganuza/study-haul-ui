@@ -1,9 +1,17 @@
 .selected-question-card {
-  background-color: aliceblue;
-  margin: 0 4rem;
+  box-shadow: 0 0 2px #01122e,
+  0 0 5px #01122e,
+  0 0 7px #01122e,
+  0 0 10px #01122e;
+  background-color: #ceecfe;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   border-radius: 15px;
   padding: 3rem 2rem;
+  margin: 0 4rem;
 }
+
 .whole-card-cont {
   display:flex;
   flex-direction: column;
@@ -29,9 +37,32 @@
   font-size: 1.75em;
 }
 
+.answer-input {
+  margin-bottom: 1rem;
+}
+
 .answers-cont {
-  background-color: aliceblue;
+  box-shadow: 0 0 2px #01122e,
+  0 0 5px #01122e,
+  0 0 7px #01122e,
+  0 0 10px #01122e;
+  background-color: #ceecfe;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   border-radius: 15px;
   width: 80%;
   padding: 15px;
+  margin: 0 4rem;
+}
+
+@media screen and (max-width: 375px) {
+  .selected-question-card {
+    margin: 5%;
+  }
+
+  .answer-input {
+    width: 80%
+  }
+
 }

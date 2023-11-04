@@ -6,12 +6,12 @@ function Header() {
   const location = useLocation();
   return (
     <div className="header">
-      <div className="logo-container">
+      {/* <div className="logo-container"> */}
         <Link className="home-link" to="/">
           <img src={logo} alt="study-haul-logo" className="logo-img" />
         </Link>
         <h1 className="sr-only">Study Haul</h1>
-      </div>
+      {/* </div> */}
       {location.pathname !== '/' && (
         <Link className="home-link" to="/">
           Home
