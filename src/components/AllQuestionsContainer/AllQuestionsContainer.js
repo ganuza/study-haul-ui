@@ -41,7 +41,7 @@ function AllQuestionsContainer({ allQuestions }) {
           Mod 3
         </button>
       </div>
-      <h2 className="questions-heading">Questions</h2>
+      <h2 className="questions-heading">Choose a Question</h2>
       {allQuestionsCards}
     </div>
   );
