@@ -3,7 +3,7 @@
   0 0 5px #01122e,
   0 0 7px #01122e,
   0 0 10px #01122e;
-  background-color: #eef5fc;
+  background-color: #ceecfe;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -15,6 +15,7 @@
 }
 
 .all-questions-card:hover {
+  background-color: #01122e;
   box-shadow: 0 0 2px #ceecfe,
   0 0 5px #ceecfe,
   0 0 7px #ceecfe,
