@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function Form({ addUserAnswer }) {
   const [answer, setAnswer] = useState('');
 
-  const submitAnswer = (event) => {
+  const submitAnswer = event => {
     event.preventDefault();
 
     const newUserAnswer = answer;
@@ -22,13 +22,15 @@ function Form({ addUserAnswer }) {
   return (
     <form>
       <textarea
+        className="answer-input"
+        name="user-answer"
         rows={5}
         placeholder="Enter Your Answer"
         value={answer}
-        onChange={(event) => setAnswer(event.target.value)}
+        onChange={event => setAnswer(event.target.value)}
       />
 
-      <button className="filter-btn" onClick={(event) => submitAnswer(event)}>
+      <button className="filter-btn" onClick={event => submitAnswer(event)}>
         Submit Answer
       </button>
     </form>
