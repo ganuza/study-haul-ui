@@ -51,7 +51,7 @@ Study Haul is a React Application that retrieves data from a custom API, built a
 
 ![study-haul-03](https://github.com/ganuza/study-haul-ui/assets/125393235/b42697ee-2ddd-4f0f-88c1-caf9a897390c)
 
-[Study Haul Deployed App]()
+[Study Haul Deployed App](https://study-haul-api-u15v.vercel.app/)
 
 ## Context:
 
