@@ -45,6 +45,11 @@ Study Haul is a React Application that retrieves data from a custom API, built a
 ![Mobile View of the Selected Question Page](https://user-images.githubusercontent.com/7227063/280494258-460ba4b8-7bf8-41dd-ab34-adf1b3b61a0d.png)
 
 [Study Haul Gif]()
+![study-haul-01](https://github.com/ganuza/study-haul-ui/assets/125393235/06af27c4-80d7-4cd9-8ad2-515a56987d9a)
+
+![study-haul-02](https://github.com/ganuza/study-haul-ui/assets/125393235/6c391909-bacb-4e8c-8c2b-2e8cf51db789)
+
+![study-haul-03](https://github.com/ganuza/study-haul-ui/assets/125393235/b42697ee-2ddd-4f0f-88c1-caf9a897390c)
 
 [Study Haul Deployed App]()
 
