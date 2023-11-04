@@ -1,5 +1,12 @@
 .all-questions-container {
-  /* background-color: blueviolet; */
+  width: 100vw;
+  margin-left: 0;
+  padding: 0;
+}
+
+.welcome-text {
+  margin: 0 0 1rem 0;
+  padding: 0;
 }
 
   a:link,
@@ -12,5 +19,3 @@ text-decoration: none;
 a:hover {
   color: #ceecfe;
 }
-
-
