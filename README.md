@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Study Haul - Backend Stretch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+Study Haul is a React Application that retrieves data from a custom API, built as part of a Stretch Tech project in module 3 of the Front End program at the Turing School of Software and Design. The API was created using Express, Knex, and PostgreSQL and was seeded with interview questions that were created from class audits in modules 2 and 3 of the Front End program. When the page loads, users are presented with a home screen that lists all questions available in the database. Users can then sort the questions by module 2 or module 3. To answer a question, the user selects the question and the selected question screen in loaded. The user is then able to enter their answer and check it against the correct answer.
 
-## Available Scripts
+## Installation Instructions:
+[Study Haul](https://github.com/ganuza/study-haul-ui) works in a browser, but if you would like to build your own version, you can clone the repository to your local machine as follows:
 
-In the project directory, you can run:
+1. Go to the [Study Haul](https://github.com/ganuza/study-haul-ui).
 
-### `npm start`
+2. Select the "fork" option on the upperright and follow the prompts to save a fork to your GitHub account:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Fork and Clone Options in GitHub](https://user-images.githubusercontent.com/7227063/280493926-43fb1c8a-6e87-4a6a-b87b-cfaaefc9849f.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Once you have forked the repository, choose the "Code" drop down to copy the SSH key for cloning:
 
-### `npm test`
+4. Open your preferred command-line interface tool (e.g. Terminal) and create a directory where you would like to clone the repository.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Change directories into the directory your created.
 
-### `npm run build`
+6. Without the brackets, type [git clone], type a space, then use Command-v on a Mac, or Control-v on PC/Android to past in the SSH key you copied in step 3.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used to build this app:
+- HTML
+- CSS
+- JavaScript
+- React JavaScript Library
+- Router
+- Cypress
+- Express
+- Knex
+- PostgreSQL
+- The Paciello Group, Coulour Contrast Analyser for testing color contrast
+- Git / Github
+- Vercel
+- Github Project
+- VS Code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview of App:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Mobile View of the Home Page
+![Mobile View of Home Page](https://user-images.githubusercontent.com/7227063/280494146-b236c364-a150-4d37-b56b-8de97c62b06e.png)
 
-### `npm run eject`
+### Mobile View of the Selected Question Page:
+![Mobile View of the Selected Question Page](https://user-images.githubusercontent.com/7227063/280494258-460ba4b8-7bf8-41dd-ab34-adf1b3b61a0d.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[Study Haul Gif]()
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Study Haul Deployed App]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Context:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Study Haul, Stretch Project is a front end development project of the Turing School of Software and Design. It is assigned during Module 3 of the program. Students are paired together on teams to complete the requirements for a minimally viable product. 
 
-## Learn More
+## Contributors:
+Adrian Zabolitzki [ganuza](https://github.com/ganuza)
+Ann Hochworter [AHochworter](https://github.com/AHochworter)
+Jan McSorley [jmcsorle](https://github.com/jmcsorle)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Learning Goals:
+The learning goals of this project included: 
+- Gain competency with Express, Knex, and PostgreSQL fundamentals
+- Build a custom API and deploy it on Vercel
+- Implement PropTypes and Cypress Testing
