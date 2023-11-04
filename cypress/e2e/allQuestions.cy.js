@@ -1,6 +1,6 @@
 describe('should load the all questions page', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:8080/api/v1/questions', {
+    cy.intercept('GET', 'https://study-haul-api.vercel.app/api/v1/questions', {
       statusCode: 200,
       fixture: 'allQuestions',
     })
@@ -17,7 +17,7 @@ describe('should load the all questions page', () => {
       .should('have.length', 3)
       .get('.all-questions-container')
       .children()
-      .should('have.length', 7)
+      .should('have.length', 9)
       .get('.all-questions-card')
       .first()
       .should(
