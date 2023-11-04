@@ -38,6 +38,12 @@ describe('should load a selected question', () => {
       .get('.filter-btn')
       .should('exist');
     cy.get('textarea[name="user-answer"]')
+      .should('not.have.value')
+      .get('.filter-btn')
+      .click()
+      .get('p')
+      .contains('Please Fill In Your Answer')
+      .get('textarea[name="user-answer"]')
       .type('CORS is Cross-Orgin-Resources-Sharing')
       .should('have.value', 'CORS is Cross-Orgin-Resources-Sharing')
       .get('.filter-btn')
@@ -51,7 +57,7 @@ describe('should load a selected question', () => {
         'h2',
         'Correct Answer: Cross Origin Resource Sharing - it allows protected resources on a web page to be requested from outside of the current domain. Basically a security feature. To use it, we need to install it as a dependency, import it and tell the app to use it.'
       );
-    cy.get('.header > :nth-child(2)').click();
+    cy.get('.logo-img').click();
     cy.url('http://localhost:3000');
   });
 });
