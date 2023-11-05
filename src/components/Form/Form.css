@@ -15,6 +15,40 @@ textarea {
   padding: 10px;
 }
 
+.answer-btn {
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 2px #ceecfe,
+  0 0 5px #ceecfe,
+  0 0 7px #ceecfe,
+  0 0 10px #ceecfe;
+  background-color: #01122e;
+  text-align: center;
+  color: #ceecfe;
+  align-items: center;
+  color: #ceecfe;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1%;
+}
+
+.answer-btn:hover {
+  box-shadow: 0 0 2px #01122e,
+  0 0 5px #01122e,
+  0 0 7px #01122e,
+  0 0 10px #01122e;
+  cursor: pointer;
+  background-color: #ceecfe;
+  color: #01122e;
+  transition-duration: 0.3s;
+}
+
+.answer-btn:focus {
+  background-color: #c58103;
+  color: #01122e;
+}
+
 @media screen and (max-width: 375px) {
   form {
       margin: 5%;

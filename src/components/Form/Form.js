@@ -39,7 +39,7 @@ function Form({ addUserAnswer }) {
         }}
       />
       {errorMessage && <p>{errorMessage}</p>}
-      <button className="filter-btn" onClick={event => submitAnswer(event)}>
+      <button className="answer-btn" onClick={event => submitAnswer(event)}>
         Submit Answer
       </button>
     </form>
