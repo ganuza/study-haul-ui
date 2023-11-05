@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 function Form({ addUserAnswer }) {
   const [answer, setAnswer] = useState('');
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
 
   const submitAnswer = event => {
     event.preventDefault();
-    
+
     if (!answer) {
-      setErrorMessage('Please Fill In Your Answer')
+      setErrorMessage('Please Fill In Your Answer');
     } else {
-      setErrorMessage('')
+      setErrorMessage('');
     }
     const newUserAnswer = answer;
 
@@ -34,12 +34,12 @@ function Form({ addUserAnswer }) {
         placeholder="Enter Your Answer"
         value={answer}
         onChange={event => {
-          setAnswer(event.target.value)
-          setErrorMessage('')
+          setAnswer(event.target.value);
+          setErrorMessage('');
         }}
       />
       {errorMessage && <p>{errorMessage}</p>}
-      <button className="filter-btn" onClick={event => submitAnswer(event)}>
+      <button className="submit-btn" onClick={event => submitAnswer(event)}>
         Submit Answer
       </button>
     </form>
