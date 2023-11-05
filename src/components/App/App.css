@@ -1,5 +1,4 @@
 .App {
-  background-color: #467591;
   text-align: center;
   display: grid;
   width: 100vw;
@@ -8,4 +7,9 @@
     'header'
     'all-questions-container' 'all-questions-cards';
   grid-gap: 1em;
+}
+
+body {
+  height: 100%;
+  background-color: #467591;
 }
